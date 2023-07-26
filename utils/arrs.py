@@ -1,6 +1,5 @@
 """Функции для работы с массивами"""
 
-
 def get(array, index, default=None):
     """
     Извлекает из списка значение по указанному индексу, если индекс существует.
@@ -11,7 +10,7 @@ def get(array, index, default=None):
     :param default: значение по-умолчанию.
     :return: значение по индексу или значение по-умолчанию.
     """
-    if index < 0:
+    if index < 0 or len(array) < index + 1:
         return default
 
     return array[index]
